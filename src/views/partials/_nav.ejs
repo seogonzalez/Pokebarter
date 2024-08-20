@@ -1,0 +1,42 @@
+<header> 
+
+    <script defer  src="/scripts/nav.js"></script>   
+    <input type="hidden" name="username" id="userActual" value="<%= usuario[0].username %>">
+    
+    <nav class="navbar navbar-expand-lg bg-gris justify-content-around position-fixed pe-0 w-100 z-10 shadow-bottom" style="z-index: 999;" id="nav-bar" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <img src="../img/logo.png" style="width: 50px; vertical-align: middle;" class="mt-0">
+                <h3 class="mt-0" style="display: inline;">Pokebarter</h3>
+            </div>
+            <ul class="navbar-nav me-sm-2 btn-navbar">
+                <li class="nav-item">
+                    <a class="nav-link my-2 my-sm-0 me-sm-5 active justify-content-center d-flex justify-content-center flex-column w-boton-nav" title="Inicio" href="" id="btnInicio">
+                        <div class="contenedor-img-btn-nav mx-auto">
+                            <img src="../img/inicio.png" id="imgInicioNav" alt="">
+                        </div>           
+                        <p class="my-0">Inicio</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a title="Perfil" class="nav-link my-2 my-sm-0 me-sm-5 d-flex justify-content-center flex-column w-boton-nav" id="userIniciado" href="">
+                        <div class="contenedor-img-btn-nav mx-auto">
+                            <img src="../img/perfil.png" id="imgPerfilNav" alt="">
+                            <p class='my-0'></p>
+                        </div>
+                         
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a title="Cerrar sesión" class="nav-link my-2 my-sm-0 me-sm-5 d-flex justify-content-center flex-column w-boton-nav" onclick="cerrarSesion()" href="/">
+                        <div class="contenedor-img-btn-nav mx-auto">
+                            <img src="../img/cierre.png" alt="">
+                        </div>
+                        
+                        <p class="my-0 pe-0">Cerrar sesión</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>   

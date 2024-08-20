@@ -1,0 +1,1205 @@
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing:border-box;
+}
+body{
+    background-color: #2F464C;
+   
+}
+{
+    background-color: #009999 !important;
+    border-color: #009999 !important; 
+}
+main .btn-primary{
+    background-color: #009999 !important;
+    border-color: #009999 !important;
+}
+
+main .btn-primary:hover{
+    background-color: #027f7f !important;
+    border-color: #027f7f !important;
+}
+main .texto-enlace{
+    color: #009999 !important;
+}
+
+main .texto-enlace:hover{
+    color: #027f7f !important;
+}
+
+.form-check-input:checked {
+    background-color: #009999 !important;
+    border-color: #009999 !important;
+}
+
+body input:focus {
+    box-shadow: 0 0 0 5px #0099993f!important;
+}
+body select:focus {
+    box-shadow: 0 0 0 5px #0099993f!important;
+}
+
+body textarea:focus {
+    box-shadow: 0 0 0 5px #0099993f!important;
+}
+
+
+select.form-control option:checked {
+    background-color: #009999 !important;
+    color: white !important;
+}
+
+select.form-control option:hover {
+    background-color: #009999 !important;
+}
+select.form-control option:focus {
+    background-color: #009999 !important;
+}
+
+/* ZONA DEL LOGIN */
+/* .mainLogin{
+    margin-top: 28px;
+    padding: 5% 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; 
+    height: 100%;
+} */
+/* Parte que tiene la imagen en el login */
+.div-img-logo{
+    grid-row: 1/2;
+    border-radius: 50%;
+    background-image:  url("../img/imgLogin/fondo-div-logo.jpg");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 148%;
+    padding: 5% 5%;
+    box-shadow: 0 0 30px 70px #eaeaea inset;
+    
+}
+.div-img-logo img{
+    width: 60%;
+}
+
+
+/* parte del formulario */
+.div-formulario{
+    margin: auto;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.div-formulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 90%; 
+}
+
+.div-formulario form fieldset{
+    padding-bottom: 30px;
+    margin-bottom: -40px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    border-bottom: solid grey 1px;
+}
+
+/* FIN DEL AREA DEL LOGIN */
+
+
+/* LA FRANJA DEL PERFIL */
+.perfil-section{
+    z-index: 901;
+    background-color: #464654;
+    
+}
+.img_perfil{
+    border-radius: 50%;
+    z-index: 900;
+    width: 200px; 
+    height: 200px; 
+}
+
+.img_perfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* FIN PARTE DEL PERFIL */
+
+/* PARTE NAV */
+.btn-ancho{
+    width: 200px !important;
+
+}
+.m-nav{
+    margin-top: 69px !important;
+
+}
+.w-boton-nav{
+    width: 120px !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+}
+.w-boton-nav p{
+    margin: auto !important;
+}
+
+
+
+
+.contenedor-img-btn-nav img{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+
+/* FIN PARTE NAV */
+
+
+/* PARTE POSTEO */
+
+
+
+.areaPosteo{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    padding-top: 0% !important;
+    flex-direction: column !important;
+}
+
+.barraPosteo {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 5px !important;
+    align-items: center !important;
+    height: 70px !important;
+    width: 100% !important;
+    margin: auto !important;
+    padding-top: 0% !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+.barraPosteo .barraPosteoHijoInput{
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important; 
+    grid-column: 2 / 7 !important;
+    margin: auto !important;
+
+}
+
+.barraPosteo .barraPosteoHijoImg{
+    display: flex !important;
+    justify-content: center !important;
+    height: 100% !important;
+    width: 90% !important;
+    grid-column: 1/2 !important; 
+    margin: auto !important;
+    margin-top: 0 !important;
+}
+
+.barraPosteo .barraPosteoHijoBoton{
+    display: flex !important;
+    justify-content: center !important;
+    grid-column: 7 / 8;
+    width: 100% !important;
+    margin: auto !important;
+
+}
+
+.caracteristicas-selecionables{
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    margin-bottom: 5px !important;
+    width: 100% !important;
+
+}
+
+.caracteristicas-selecionables .caracteristica-habilidad{
+    width: 100% !important;
+    grid-column: 1/3 !important;
+}
+
+.caracteristicas-selecionables .caracteristica-nivel{
+    width: 100% !important;
+    grid-column: 3 / 4 !important;
+}
+
+.caracteristicas-selecionables .caracteristica-sexo{
+    width: 100% !important;
+    grid-column: 4 / 5 !important;
+}
+
+/* FIN DE LA PARTE POSTEO */
+
+/* PARTE MURO */
+body .Contenido-tabla-HNS{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+/* FIN PARTE MURO */
+
+.ml-centro{
+    margin-left: 380px !important;
+
+}
+.bg-gris{
+    background-color: #2e3030 ;
+}
+.rounded-top {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+.rounded-bottom {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.table thead th {
+    background-color: #007bff !important; /* Color de fondo de la cabecera */
+    color: #ffffff; /* Color del texto de la cabecera */
+}
+.shadow-bottom {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra en la parte inferior */
+}
+
+
+.tabla-movimientos{
+
+        border-radius: 70px !important; 
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 9999;
+}
+
+.sexo{
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #212529;
+    padding: 5px; 
+    text-align: center;
+    border-radius: 5px;
+}
+
+.table-rounded {
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.thead-altura {
+    height: 10px;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+.bg-shiny{
+    background: radial-gradient(circle,#e4c738 , transparent, transparent) !important;
+
+}
+thead, th{
+    background-color: #212529;
+}
+
+.shadowofrecido{
+    box-shadow: 0 0 4px rgba(203, 2, 2, 0.655)
+
+}
+.shadowsolicitado{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.587)
+
+}
+.shadowPopup{
+    box-shadow: 0 0 20px rgb(0, 0, 0)
+
+}
+
+.resized-svg {
+    height: 23px !important;
+    width: auto !important;
+    display: block !important; /* Asegura que el SVG se renderice como un bloque */
+    margin: auto !important;   /* Centra el SVG horizontalmente (opcional) */
+  }
+
+  nav .resized-svg path {
+    vector-effect: non-scaling-stroke !important; /* Evita que las líneas de los SVG se escalen */
+  }
+
+  
+
+/* MEDIA PARA TABLETS */
+@media screen and (max-width: 1035px) {
+
+    body #parteLateral{
+        visibility: hidden;
+    }
+
+    /* ZONA LOGIN */
+    body .mainLogin{
+        grid-template-columns: repeat(1,1fr) !important;
+
+    }
+    body .mainLogin .seccion-de-login{
+        position: absolute !important;
+        margin: auto !important;
+        right: 0;
+        left: 0;
+    }
+
+    body .mainLogin .div-formulario{
+        background-color: #ffffff6f;
+    }
+
+    body .mainLogin .container-login{
+        display: flex !important;
+        align-items: center !important;
+
+    }
+    body .mainLogin .div-img-logo{
+        aspect-ratio: 1/1 !important;
+        height: 80% !important;
+
+    }
+
+    body .mainLogin #div-registro{
+        width: 70% !important;
+    }
+
+    /* FIN LOGIN */
+
+    .btn-navbar{
+        
+        flex-direction: row !important;
+        
+    }
+
+    .body li .nav-item{
+        width: 70px !important;
+        padding-right: 0;
+    }
+    
+
+    /* PROFILE */
+    body .profile-res{
+        position: absolute !important;
+        margin-left: 0% !important;
+        width: 100% !important;
+        margin-top: 65px !important;
+        height: 370px !important;
+        align-items: center !important;
+        
+    }
+
+    body .profile-res .div-botones-ofre-y-soli{
+        display: flex !important;
+        align-items: center !important;
+        margin-top: 0px !important;
+        width: 100%;
+    }
+
+    body .profile-res .div-botones-ofre-y-soli .form-botones-ofre-y-soli{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-around !important;
+        flex-direction: row !important;
+        margin-top: 0px !important;
+        width: 60%;
+    }
+
+    body .profile-res .div-botones-ofre-y-soli .form-botones-ofre-y-soli .botones-ofre-y-soli{
+        width: 140px !important;
+        margin-top: 10px !important;
+    }
+
+    .botonMostrarDatos{
+        display: flex !important;
+        margin: auto !important;
+        margin-right: 10px !important;
+        margin-top: -30px !important;
+    }
+
+    .botonMostrarDatos:hover{
+    
+        background-color: #455356 !important;
+
+    }
+
+
+    body .scrolled {
+        position: fixed !important;
+        margin-top: 85px !important;
+        height: 75px !important;
+        transition: 0.2s;
+        display: flex;
+        align-items:baseline;
+    }
+
+    body .scrolled #fromImg {
+        display: none;
+
+    }
+
+    body .scrolled .img_perfil {
+        width: 55px;
+        height: auto;
+        margin-top: 10px !important;
+        margin-left: 40px !important;
+
+    }
+
+    body .scrolled .nombreUsuario {
+        margin: auto;
+        margin-left: 0px !important;
+    }
+
+    body .scrolled .div-botones-ofre-y-soli {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        width: 60% !important;
+        justify-content: space-around !important;
+    }
+
+    body .scrolled .botonMostrarDatos{
+        margin-right: 10px !important;
+        margin: auto;
+        margin-top: 15px !important;
+    }
+
+   
+        
+    /* FIN DE PROFILE */
+
+
+    /*  ÁREA PRINCIPAL DE LA APP */
+
+    body main{
+        display: grid !important;
+        grid-template-columns: repeat(8, 1fr) !important;
+        position: absolute !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    body .zonaPrincipal{
+        width: 100% !important;
+        margin: auto !important;
+        margin-top: 420px !important;
+        grid-column: 2 / 8 !important;
+        
+    }
+
+
+    /* ---POSTEO */
+    
+    .barraPosteo .barraPosteoHijoImg{
+        width: 70% !important;
+    }
+
+    /* ---FIN DE POSTEO */
+
+
+    /* FIN DE AREA PRINCIPAL DE LA APP */
+
+  
+
+    /* LATERAL */
+    body main .parteLateral{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        position: absolute !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    body .zonaLateral{
+        position: relative !important;
+        grid-column: 1 / 3 !important;
+        margin: auto !important;
+        width: 1200px !important;
+        margin-top: 400px !important;
+        height: 370px !important;
+        align-items: center !important;
+        margin-left: 10px !important;
+        height: 50% !important;
+    }
+
+    body .scrolledLateral{
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        grid-column: 1 / 3 !important;
+        margin: auto !important;
+        width: 1200px !important;
+        margin-top: 110px !important;
+        height: 370px !important;
+        align-items: center !important;
+    
+    }
+
+    body .zonaLateral .lateral-parte-userbtn{
+        height: 65% !important;
+    }
+    body .zonaLateral .lateral-parte-userbtn textarea{
+        height: 60px !important;
+    }
+    body .scrolledLateral .lateral-parte-userbtn{
+        height: 55% !important;
+    }
+    
+
+    body .scrolledLateral .zonaLateralCaja,
+    body .zonaLateral .zonaLateralCaja{
+        width: 100% !important;
+        position: absolute !important;
+        background-color: transparent;
+        height: 550px !important;
+        background-color: #000000c4 !important;
+        display: flex !important;
+    }
+ 
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2{
+        width: 100% !important;
+        position: absolute !important;
+        height: 100% !important;
+
+    }
+
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 > *,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 > * {
+        margin-top: 20px !important;
+    }
+
+   
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 .nombreUserLateral,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .nombreUserLateral{
+        margin-top: 25px !important;
+        margin-bottom: 20px !important;
+        font-size:larger;
+        
+    } 
+
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 #formFiltro,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 #formFiltro{
+        margin-top: 25px !important;
+        margin-bottom: 20px !important;
+        font-size:larger;
+        
+    }
+    
+    
+    body .div-editar{
+        width: 50% !important;
+        margin-top: 80px !important;
+    }
+
+    body .scrolledLateral .div-editar .boton-registrarse,
+    body .div-editar .boton-registrarse{
+        padding-top: 5px !important;
+    }
+
+    body .scrolledLateral .div-editar .nombre-y-apellido
+    body .div-editar .nombre-y-apellido{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    body .scrolledLateral .div-editar .nombre-y-apellido input
+    body .div-editar .nombre-y-apellido input{
+        width: 100% !important;
+
+    }
+    
+
+    /* FIN DE LATERAl */
+
+
+}
+
+
+
+
+
+
+
+/* MEDIA PARA TELÉFONOS */
+@media screen and (max-width: 767.34px) {
+
+    body{
+        font-size: 12px !important;
+    }
+
+
+    /* NAV */
+
+    body .w-boton-nav{
+        width: 70px !important;
+    }
+
+    body ul{
+        position: fixed;
+        width: 100%;
+        left: 0%;
+        bottom: 0%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #2e3030;
+    }
+
+    /* FIN NAV */
+
+    /* PERFIL */
+    body .profile-res{
+        margin-left: 0% !important;
+        width: 100% !important;
+        margin-top: 70px !important;
+        height: 370px !important;
+        position: absolute !important;
+        align-items: center !important;
+        
+    }
+    
+
+    body .profile-res .div-botones-ofre-y-soli .form-botones-ofre-y-soli{
+        width: 100%;
+    }
+
+    body .profile-res .div-botones-ofre-y-soli .form-botones-ofre-y-soli .botones-ofre-y-soli{
+        width: 120px !important;
+    }
+
+    body .profile-res{
+        position: absolute !important;
+        margin-left: 0% !important;
+        width: 100% !important;
+        margin-top: 65px !important;
+        height: 370px !important;
+        align-items: center !important;
+        
+    }
+
+    body .profile-res .div-botones-ofre-y-soli{
+        display: flex !important;
+        align-items: center !important;
+        margin-top: 0px !important;
+        width: 100% !important;
+        gap: 10px !important;
+        justify-content: space-between !important;
+    
+    }
+
+    body .profile-res .div-botones-ofre-y-soli .form-botones-ofre-y-soli{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-around !important;
+        flex-direction: row !important;
+        margin-top: 0px !important;
+        width: 100%;
+    }
+
+    body .btn-primary{
+        font-size: 12px !important;
+    }
+
+    body .form-control{
+        font-size: 12px !important;
+    }
+    
+    
+    body .profile-res .div-botones-ofre-y-soli .form-botones-ofre-y-soli .botones-ofre-y-soli{
+        width: auto !important;
+        margin-top: 10px !important;
+        
+    }
+
+
+    body .scrolled {
+        position: fixed !important;
+        margin-top: 75px !important;
+        height: 75px !important;
+        transition: 0.2s;
+        display: flex;
+        align-items:baseline;
+    }
+
+    body .scrolled #fromImg {
+        display: none;
+
+    }
+
+    body .scrolled .img_perfil {
+      margin-left: 10px !important;
+      margin-top: 18px !important;
+    }
+    body .scrolled .img_perfil img{
+        width: 40px !important;
+      }
+    
+    body .scrolled .nombreUsuario {
+        transform: scale(0.8)  !important;
+        margin: 18px !important;
+    }
+
+
+    
+    body .scrolled .div-botones-ofre-y-soli {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        width: 60% !important;
+        justify-content: space-around !important;
+    }
+
+    body .scrolled .botonMostrarDatos{
+        display: flex !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 12px !important;
+        margin-top: auto !important;
+
+    }
+
+    /* FIN DEL PERFIL */
+
+
+
+    /* ZONA PRINCIPAL */
+
+    /* Muro */
+
+    
+    
+    body .zonaPrincipal{
+        width: 100% !important;
+        position: absolute !important;
+        grid-column: 1 / 9;
+    }
+
+
+    body .Contenido-tabla-HNS{
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: repeat(1,1fr) !important;
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+
+    body .Contenido-tabla-HNS > *{
+        grid-column: 2 / 4 !important;
+    }
+
+    body .Contenido-tabla-HNS .labels-HNS{
+        grid-column: 1 / 2 !important;
+    }
+
+    /* Fin muro */
+
+    /* FIN ZONA PRINCIPAL */
+
+
+
+    /* ZONA LATERAL */
+
+    body main .parteLateral{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        position: absolute !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    body .zonaLateral{
+        grid-column: 1 / 3 !important;
+        margin: auto !important;
+        width: 1200px !important;
+        margin-top: 400px !important;
+        height: 370px !important;
+        align-items: center !important;
+        margin-left: 10px !important;
+    }
+
+    body .scrolledLateral{
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+        grid-column: 1 / 3 !important;
+        margin: auto !important;
+        width: 1200px !important;
+        margin-top: 140px !important;
+        height: 370px !important;
+        align-items: center !important;
+    
+    }
+
+    body .zonaLateral .lateral-parte-userbtn{
+        height: 65% !important;
+        margin-bottom: 20px !important;
+    }
+    body .zonaLateral .lateral-parte-userbtn textarea{
+        height: 60px !important;
+    }
+    body .scrolledLateral .lateral-parte-userbtn{
+        height: 55% !important;
+    }
+    
+
+    body .scrolledLateral .zonaLateralCaja,
+    body .zonaLateral .zonaLateralCaja{
+        width: 100% !important;
+        position: absolute !important;
+        background-color: transparent;
+        height: 550px !important;
+        background-color: #000000c4 !important;
+        display: flex !important;
+    }
+ 
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2{
+        width: 100% !important;
+        position: absolute !important;
+        height: 100% !important;
+
+    }
+
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 > *,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 > * {
+        margin-top: 20px !important;
+    }
+
+   
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 .nombreUserLateral,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .nombreUserLateral{
+        margin-top: 25px !important;
+        margin-bottom: 20px !important;
+        font-size:larger;
+        
+    } 
+
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 #formFiltro,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 #formFiltro{
+        margin-top: 25px !important;
+        margin-bottom: 20px !important;
+        font-size:larger;
+        
+    }
+    
+    
+    body .div-editar{
+        width: 50% !important;
+        margin-top: 80px !important;
+    }
+
+    body .scrolledLateral .div-editar .boton-registrarse,
+    body .div-editar .boton-registrarse{
+        padding-top: 5px !important;
+    }
+
+    body .scrolledLateral .div-editar .nombre-y-apellido
+    body .div-editar .nombre-y-apellido{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    body .scrolledLateral .div-editar .nombre-y-apellido input
+    body .div-editar .nombre-y-apellido input{
+        width: 100% !important;
+
+    }
+    
+ 
+    body .zonaLateral{
+        position: relative !important;
+        grid-column: 1 / 3 !important;
+        margin: auto !important;
+        margin-top: 370px !important;
+        height: 350px !important;
+        align-items: center !important;
+    }
+
+    body .scrolled .zonaLateralCaja,
+    body .zonaLateral .zonaLateralCaja{
+        height: 110% !important;
+    }
+ 
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2{
+        height: 80% !important;
+
+    }
+
+    body .scrolledLateral #editarInfo,
+    body .zonaLateral #editarInfo {
+        margin-top: 30px !important;
+    }
+
+    body .div-editar{
+        width: 80% !important;
+        margin-top: 45px !important;
+    }
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 .div-form-filtro,     
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .div-form-filtro{
+        margin-top: 0px !important
+    }
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 .div-form-filtro #formFiltro,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .div-form-filtro #formFiltro{
+        margin-top: 0px !important
+    }
+    body .scrolledLateral .zonaLateralCaja .zonaLateralCaja2 .zona-quitar-filtros,
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .zona-quitar-filtros{
+        margin-top: -30px !important
+    }
+
+    /* FIN ZONA LATERAL */
+
+}
+
+@media screen and (max-width: 440px) {
+
+
+    /* LOGIN */
+    body .mainLogin #div-registro{
+        width: 90% !important;
+    }
+
+    body .mainLogin .seccion-de-login{
+        position: absolute !important;
+        margin: auto !important;
+        right: 0;
+        left: 0;
+    }
+    body .mainLogin .div-img-logo{
+        background-image:none !important;
+        /* box-shadow: none !important; */
+        margin-left: 0 !important;
+        width: 100% !important;
+        visibility: hidden;
+
+    }
+    body .mainLogin .div-img-logo img{
+        visibility: visible !important;
+        display: flex !important;
+        position: absolute !important;
+        width: 100%;
+        margin-left: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
+
+
+    }
+    /* FIN LOGIN */
+
+
+
+    /* PERFIL */
+
+    body .botonMostrarDatos{
+        margin: auto !important;
+    }
+    body .profile-res .nombreUsuario {
+        display: none !important;
+    }
+    body .profile-res {
+        position: fixed !important;
+        margin-top: 75px !important;
+        height: 75px !important;
+        transition: 0.2s;
+        display: flex;
+        align-items:baseline;
+    }
+
+    body .profile-res #fromImg {
+        display: none;
+
+    }
+
+    body .profile-res .img_perfil {
+        width: 55px;
+        height: auto;
+        margin-top: 10px !important;
+        margin-left: 10px !important;
+
+    }
+
+    body .profile-res .nombreUsuario {
+        margin: auto;
+        margin-left: 0px !important;
+    }
+
+    body .profile-res .div-botones-ofre-y-soli {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        width: 60% !important;
+        justify-content: space-around !important;
+    }
+
+    body .profile-res .botonMostrarDatos{
+        margin-right: 10px !important;
+        margin: auto;
+        margin-top: 15px !important;
+    }
+    /* FIN PERFIL */
+
+
+
+    /* LATERAL */
+    body .zonaLateral{
+        position: fixed !important;
+        grid-column: 1 / 3 !important;
+        margin: auto !important;
+        width: 100% !important;
+        margin-top: 70px !important;
+        height: 370px !important;
+        align-items: center !important;
+    
+    }
+
+    body .zonaLateral .zonaLateralCaja{
+        height: 100% !important;
+    }
+
+    
+
+    body .zonaLateral #editarInfo {
+        margin-top: -30px !important;
+
+    }
+
+
+    body .zonaLateral .lateral-parte-userbtn{
+        margin-top: -130px !important;
+        height: 40% !important;
+        margin-bottom: 0px !important;
+    }
+    body .zonaLateral .lateral-parte-userbtn textarea{
+        height: 60px !important;
+        margin-bottom: 0px !important;
+    }
+
+    
+
+ 
+    body .zonaLateral .zonaLateralCaja{
+        width: 100% !important;
+        position: absolute !important;
+        background-color: transparent;
+        height: 550px !important;
+        background-color: #000000c4 !important;
+        display: flex !important;
+    }
+ 
+
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2{
+        width: 100% !important;
+        position: absolute !important;
+        height: 100% !important;
+
+    }
+
+
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 > * {
+        margin-top: 20px !important;
+    }
+
+   
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .nombreUserLateral{
+        margin-top: 25px !important;
+        margin-bottom: 20px !important;
+        font-size:larger;
+        
+    } 
+
+  
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .div-form-filtro{
+        margin-top: 100px !important
+    }
+
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .div-form-filtro #formFiltro{
+        margin-top: 0px !important
+    }
+    
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 .zona-quitar-filtros{
+        margin-top: -30px !important
+    }
+
+
+
+
+    body .zonaLateral .zonaLateralCaja .zonaLateralCaja2 #formFiltro{
+        margin-top: 25px !important;
+        margin-bottom: 20px !important;
+        font-size:larger;
+        
+    }
+    
+    
+    body .div-editar{
+        width: 50% !important;
+        margin-top: 80px !important;
+
+    }
+
+    body .div-editar .boton-registrarse{
+        padding-top: 5px !important;
+    }
+
+    body .div-editar .nombre-y-apellido{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    body .div-editar .nombre-y-apellido input{
+        width: 100% !important;
+
+    }
+
+
+
+    /* FIN LATERAL */
+
+
+    body .zonaPrincipal {
+        width: 100% !important;
+        justify-content: center !important;
+        grid-column: unset !important;
+        margin-top: 140px !important;
+    }
+
+    .pokemon-columna{
+        display: none !important;
+    }
+
+}

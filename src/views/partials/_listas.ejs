@@ -1,0 +1,127 @@
+<div class="row mt-3 mb-2">
+    <div class=" col-md-13 mx-0 pt-2">
+      <div class="container">
+        <div class="w-100 text-center rounded bg-gris">
+          <h4 id="título lista"><%= pokemon[0].estado %>s</h4>
+        </div>
+        <table class=" small w-100 text-center thead-light table-rounded">
+          <thead class="bg-gris" >
+            <tr>
+              <th class="bg-gris pokemon-columna" scope="col" style="width: 70px;"></th>
+              <th class="bg-gris" scope="col">Pokemon</th>
+              <th class="bg-gris" scope="col">Moviminetos</th>
+              <th class="bg-gris" scope="col">Habilidad</th>
+              <th class="bg-gris" scope="col">Nivel</th>
+              <th class="bg-gris" scope="col">Sexo</th>
+              <th class="bg-gris" scope="col">Juego</th>
+              <th class="bg-gris" scope="col" id="thBoton"  style="width: 30px;"></th></th>
+            </tr>
+          </thead>
+          <tbody class="bg-gris">
+          
+              <%for(let i=0 ; i < pokemon.length ; i++){ %>
+                
+                <tr class="border-top" id="post">
+                  <td hidden>
+                    <input type="text" hidden id="idPokemon" value="<%= pokemon[i].id %>">
+                    <input type="text" hidden id="esLista" value="si">
+                    <input type="text" hidden id="estado" value="<%= pokemon[i].estado %>">
+                  </td>
+
+                  <% if(pokemon[i].shiny != false){ %>
+                    <td class="align-middle bg-shiny">
+                  <% }else{ %>
+                    <td class="align-middle">
+                  <% } %>
+                    <img  class="w-75 object-fit-cover" src="<%= pokemon[i].img %>" alt=""> 
+                  </td>
+                  
+                  <td class="align-middle pokemon-columna"> 
+                    <%= pokemon[i].pokemon %> 
+                  </td>
+                  <td class="align-middle"> 
+                    <select class="w-100 border-0" style="background-color: transparent;">
+                      <option value="" disabled selected style="display:none;"></option>
+                      <option disabled >
+                        <% if(pokemon[i].movimiento_1){ %>
+                          <%= pokemon[i].movimiento_1 %>
+                        <% }else{ %>
+                          -
+                        <% } %>
+                      </option>
+                      <option disabled>
+                        <% if(pokemon[i].movimiento_2){ %>
+                          <%= pokemon[i].movimiento_2 %>
+                        <% }else{ %>
+                          -
+                        <% } %>
+                      </option>
+                      <option disabled>
+                        <% if(pokemon[i].movimiento_3){ %>
+                          <%= pokemon[i].movimiento_3 %>
+                        <% }else{ %>
+                          -
+                        <% } %>
+                      </option>
+                      <option disabled>
+                        <% if(pokemon[i].movimiento_4){ %>
+                          <%= pokemon[i].movimiento_4 %>
+                        <% }else{ %>
+                          -
+                        <% } %>
+                      </option>
+                    </select>
+                  </td>
+                  <td class="align-middle">
+                    <% if(pokemon[i].habilidad){ %>
+                      <%= pokemon[i].habilidad %>
+                    <% }else{ %>
+                      -
+                    <% } %>
+                  </td>
+                  <td class="align-middle">
+                    <% if(pokemon[i].nivel){ %>
+                      <%= pokemon[i].nivel %>
+                    <% }else{ %>
+                      -
+                    <% } %>
+                  </td>
+                  <td class="align-middle">
+                    <% if(pokemon[i].sexo){ %>
+                      <% if(pokemon[i].sexo == "M") { %>
+                        &#x2642;
+                      <% }else if(pokemon[i].sexo == "F") { %>
+                        &#x2640;
+                      <% }else { %>
+                        -
+                      <%}%>        
+                    <% } %>
+                  </td>
+                  <td class="align-middle">
+                    <% if(pokemon[i].juego){ %>
+                      <%= pokemon[i].juego %>
+                    <% }else{ %>
+                      -
+                    <% } %>
+                  </td>
+
+                  <td class="align-middle" id="tdBoton">
+
+                    <button id="btnEliminarPost" title="Eliminar" class="btn btn-outline-secondary border-0">
+                      &#215
+                    </button>
+
+                  </td>
+
+                
+                </tr>
+
+              <% } %>
+
+          </tbody>
+
+        </table>
+
+      </div>        
+    </div>
+  </div>

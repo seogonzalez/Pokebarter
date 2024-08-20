@@ -1,0 +1,126 @@
+<script defer src="/scripts/muro.js"></script>
+
+<div class="row mt-3 mt-0 muro-res">
+    <div class=" col-md-13 mx-0 pt-3">
+      <div class="container muro">
+        <!-- Zona de post que se realizan -->
+        <% pokemon = pokemon.slice().reverse(); %>
+        <% pokemon.forEach(function(pokemonRecorrido) { %>
+
+          
+          <div class='py-3 shadow<%= pokemonRecorrido.estado %> row d-flex bg-gris px-3 justify-content-center rounded align-items-center mx-auto mb-5 position-relative' id="post">
+            <input type="text" hidden id="idPokemon" value="<%= pokemonRecorrido.id %>">
+            <input type="text" hidden id="esLista" value="no">
+            <p class="small ms-0">
+              <a href="/perfil/<%= pokemonRecorrido.user %>" id="userPost" class="texto-enlace fw-bold text-decoration-none"><%= pokemonRecorrido.user%></a>
+              ha <%= pokemonRecorrido.estado%> un  <%= pokemonRecorrido.pokemon%>
+                
+              <% if(pokemonRecorrido.shiny == true){%>
+                  
+                <span class="text-warning">shiny</span>
+
+              <% } %>
+              para <b><%= pokemonRecorrido.juego %></b>.
+            </p>
+            <% if (pokemonRecorrido.user == usuario[0].username){ %>
+              <button class="position-absolute text-align-center rounded-circle border-0 text-light small me-2 mt-1 end-0 top-0 post-opcion" style="width: 30px; height: 30px; background-color: transparent;" title="Eliminar publicación" style="right: 0" id="btnEliminarPost">&#x1F5D1;</button>
+            <% } %>
+            <div class="ps-0 col-md-4 d-flex ms-0 " >
+              <img src="<%= pokemonRecorrido.img%>" alt="Imagen de <%= pokemonRecorrido.pokemon %>" class="border w-100 rounded bg-light">
+            </div>
+            <div class=" col-md-8 rounded d-flex  justify-content-around">
+              <div class="row mt-2 d-flex  justify-content-center ">
+                
+                <div class="Contenido-tabla-HNS">
+                  
+                  <div class="row mb-1 px-0 d-flex justify-content-between labels-HNS">
+                    <div class="bg-dark col-md-6 d-flex text-center rounded justify-content-center">
+                      <p class=" mb-0 rounded"><b>Habilidad</b></p>                     
+                    </div>
+
+                    <div class="bg-dark  col-md-3 d-flex text-center rounded justify-content-center">
+                      <p class=" mb-0 rounded w-100"><b>Nivel</b></p>                     
+                    </div>
+
+                    <div class="bg-dark col-md-2 d-flex text-center rounded justify-content-center">
+                      <p class="mb-0 rounded w-100"><b>Sexo</b></p>                     
+                    </div> 
+                  </div>
+                  <% let incognito = "-"; %>
+                  <div class="row my-0 h-auto d-flex px-0 mb-2 justify-content-between ">
+                      
+                    <div class=" col-md-6 h-auto pb-0 d-flex rounded justify-content-center">
+                      <% if(pokemonRecorrido.habilidad) { %>
+                        <p class="mb-1"> <%=pokemonRecorrido.habilidad%></p>
+                      <% }else { %>
+                        <p class="mb-1"><%= incognito %></p>
+                      <%}%>                           
+                    </div>
+
+                    <div class=" col-md-3 d-flex rounded justify-content-center">
+                      <% if(pokemonRecorrido.nivel) { %>
+                        <p class="mb-1"> <%=pokemonRecorrido.nivel%></p>
+                      <% }else { %>
+                        <p class="mb-1"><%= incognito %></p>
+                      <%}%>           
+                    </div>
+
+                    <div class=" col-md-2 d-flex rounded justify-content-center">
+                      <% if(pokemonRecorrido.sexo == "M") { %>
+                        <p class="mb-1">&#x2642;</p>
+                      <% }else if(pokemonRecorrido.sexo == "F") { %>
+                        <p class="mb-1">&#x2640;</p>
+                      <% }else { %>
+                        <p class="mb-1">-</p>
+                      <%}%>                     
+                    </div>
+                    
+                  </div>
+                    
+                </div>
+      
+
+                <p class="w-100 bg-dark text-center rounded mb-0"><b>Movimientos</b></p>
+                <table class="table rounded w-100 text-center table-bordered  table-rounded" style="table-layout: fixed;">
+                      
+                  <tbody>
+                    <tr>
+                      <% if(pokemonRecorrido.movimiento_1) { %>
+                        <td> <%=pokemonRecorrido.movimiento_1%></td>
+                      <% }else { %>
+                        <td> <%= incognito %> </td>
+                      <%}%>
+                        
+                      <% if(pokemonRecorrido.movimiento_2) { %>
+                        <td> <%=pokemonRecorrido.movimiento_2%></td>
+                      <% }else { %>
+                        <td> <%= incognito %> </td>
+                      <%}%>
+                      
+                    </tr>
+                    <tr>
+
+                      <% if(pokemonRecorrido.movimiento_3) { %>
+                        <td> <%=pokemonRecorrido.movimiento_3%></td>
+                      <% }else { %>
+                        <td> <%= incognito %> </td>
+                      <%}%>
+
+                      <% if(pokemonRecorrido.movimiento_4) { %>
+                        <td> <%=pokemonRecorrido.movimiento_4%></td>
+                      <% }else { %>
+                        <td> <%= incognito %> </td>
+                      <%}%>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>     
+            </div>
+          </div>
+          
+        <% }); %>
+
+      </div>        
+    </div>
+  </div>

@@ -1,0 +1,183 @@
+<% let no = "Sin especificar"; %>
+
+<script defer src="/scripts/inicio.js"></script>
+<script defer src="/scripts/laterales.js"></script>
+
+<div class="container d-flex m-nav position-fixed end-0 col-md-2 px-0 me-4 zonaLateral" id="zonaLateral" >
+    <div class="container mt-4 bg-gris rounded zonaLateralCaja" style="height: 430px;" id="cajaLateral">
+        <div class="row h-100 zonaLateralCaja2 " >
+
+            <% if( pag != "Inicio") { %>
+
+                <div class="border-bottom d-flex my-2 justify-content-center  " style="height: 40px;" >
+                    <h5 class="h-100 mb-2"><%= usuario[0].username %></h5>
+                </div>
+
+                <div class="my-0 lateral-parte-userbtn">
+                
+                    <% if( (usuario[0].nombre  || usuario[0].nombre != "") && (usuario[0].apellido  || usuario[0].apellido != "")) { %>
+                        <div class="d-flex my-2 justify-content-center nombreUserLateral" style="height: 10%;" >
+                            <p><%= usuario[0].nombre %> <%= usuario[0].apellido %></p>
+                        </div>
+                    <% } %>    
+                
+                    <div class=" d-flex my-2 justify-content-center flex-column" style="height: 35%;" >
+                        <div class="h-50 text-center">
+                            <button class="d-flex w-100 btn btn-primary mx-auto justify-content-center align-items-center" id="btnOcultarCorreo" type="button" title="Mostrar correo"><b>Correo</b></button>
+                            <% if( usuario[0].email && usuario[0].email != "" ){ %>
+                                <p id="lineaCorreo" hidden><%= usuario[0].email %></p>
+                            <% }else{ %>
+                                <p id="lineaCorreo" hidden><%= no %></p>
+                            <% } %>
+                        </div>
+                        <div class="text-center h-50">
+                            <button class="d-flex btn w-100 btn-primary mx-auto align-items-center justify-content-center" id="btnOcultarTelefono" type="button" title="Mostrar teléfono"><b>Teléfono</b></button>
+                            <% if( usuario[0].telefono && usuario[0].telefono != "" ){ %>
+                                <p id="lineaTelefono" hidden><%= usuario[0].telefono %></p>
+                            <% }else{ %>
+                                <p id="lineaTelefono"  hidden><%= no %></p>
+                            <% } %>
+                        </div>
+                    
+                    </div>
+
+                    <div class="rounded d-flex my-2 justify-content-center" style="height: 45%;" >
+                        <div class="text-justify text-light rounded bg-dark w-100 px-2 py-1" name="datos_adicionales " id="datos_adicionales">
+                            <% if(usuario[0].datos_adicionales && usuario[0].datos_adicionales != "" ){ %>
+                                <%= usuario[0].datos_adicionales %>
+                            <% } %>   
+                        </div>
+                    </div>
+            
+                </div>
+
+                <div class="mt-0 d-flex align-items-center justify-content-center" id="editarInfo" style="height: 50px;">
+                    
+                    <button class="btn btn-primary mx-auto" id="btnEditar" type="submit" >Editar información</button> 
+            
+                </div>
+            <% } else { %> 
+                
+                <div class="border-bottom d-flex my-2 justify-content-center" style="height: 40px;" >
+                    <h5 class="h-100 mb-2">Filtros</h5>
+                </div>
+
+                
+
+                <div class="my-0 d-flex my-2 justify-content-center h-auto div-form-filtro " style="height: 70%;">
+                    
+                    <form id="formFiltro">
+
+                        <input type="hidden" name="username" id="userActual" value="<%= usuario[0].username %>">
+
+                        <div class="col-lg-12 d-flex my-4">
+                            <input name="pokemon" list="lista-PokemonBuscado" id="input-PokemonBuscado" autocomplete="off" class="form-control" id="nombre" placeholder="Pokémon">
+                            <datalist dir="rtl" class="position-absolute" class="bg-dark rounded d-none"  id="lista-PokemonBuscado">
+                                            
+                            </datalist>
+                        </div>
+                            
+                        <div class="col-md-12 mx-auto d-flex my-4 justify-content-center align-items-center"">
+                            <label class="form-check-label me-2" for="checkbox1">
+                                Shiny
+                            </label>
+                            <input  name="shiny" class="form-check-input" type="checkbox" value="1" id="checkboxShiny">
+                        </div>
+
+                        <div class="col-md-12 mx-auto d-flex mt-4 mb-5 justify-content-center align-items-center"">
+                            <select class="form-control text-center" title="Estado" name="estado" id="selectEstado">
+                                <option value="todos" selected>Todos</option>
+                                <option value="solicitado">Solicitados</option>
+                                <option value="ofrecido">Ofrecidos</option>
+                            </select>
+                                
+                        </div>
+
+                        <div class="col-md-12 mx-auto d-flex my-2 justify-content-center align-items-center"">
+                            <button class="btn ms-2 btn-primary" id="btnFiltrar" type="submit" >Filtrar</button> 
+                        </div>
+
+                    </form>
+                        
+                </div>
+                
+
+                <div class="my-0 d-flex my zona-quitar-filtros justify-content-center div" style="height: 70%;">
+                    <form action="/inicio" method="post" >
+                        <input type="hidden" name="username" id="userActual" value="<%= usuario[0].username %>">
+                        <input type="text" hidden value="true" name="verdad">
+                        <div class="col-md-12 mx-auto d-flex my-4 justify-content-center align-items-center"">
+                            <button class="btn ms-2 btn-primary" onclick="recargar()" id="btnQuitarFiltros">Quitar filtros</button> 
+                        </div>
+                    </form>
+                </div>
+            
+                
+            <% } %> 
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Opacidad de la pantalla -->
+<div class="z-5 position-absolute w-100 h-100 mx-0 div-pantalla" style="background-color: rgba(0, 0, 0, 0.274); display: none; " id="div-pantalla"></div>
+
+<!-- Zona de edición de inpormación de usuario -->
+<div class="shadow container mt-4 bg-gris rounded py-3 px-4 position-fixed z-3 div-editar " style="width: 35%; top: 50%;
+left: 50%;transform: translate(-50%, -50%); display: none;" id="areaEdicion">
+    <form id="formEditar">
+        <fieldset>
+            <div class="row mx-auto mb-1 nombre-y-apellido">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <input type="text" name="nombre" class="form-control " id="nombre" aria-describedby="emailHelp" value="<%= usuario[0].nombre %>" placeholder="Nombre">
+                </div>
+                <div class="col-lg-6 d-flex align-items-center">
+                    <input type="text" name="apellido" class="form-control " id="apellido" aria-describedby="emailHelp" value="<%= usuario[0].apellido %>" placeholder="Apellido">
+                </div>
+            </div>
+
+            <div class="row mx-auto mb-1">
+                <div class="col-lg-12 d-flex align-items-center">
+                    <input required readonly type="text" name="username" class="form-control text-muted" id="username" value="<%= usuario[0].username %>">
+                </div>
+            </div>
+
+            <div class="row mx-auto mb-1">
+                <div class="col-lg-12 d-flex align-items-center">
+                    <input required  type="email" name="email" class="form-control" id="email" placeholder="Correo electrónico*" value="<%= usuario[0].email %>" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="row mx-auto mb-1">
+                <div class="col-lg-12 d-flex align-items-center">
+                    <input type="telefono" name="telefono" class="form-control" id="telefono" placeholder="Teléfono" value="<%= usuario[0].telefono %>" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="row mx-auto mb-1">
+                <div class="col-lg-12 d-flex align-items-center">
+                    <textarea class="form-control " id="datos" name="datos_adicionales" placeholder="¿Algo que quieras contar?" rows="3"><%= usuario[0].datos_adicionales %></textarea>                
+                </div>
+            </div>
+
+            <div class="row mx-auto mb-1 ">
+                <div class="col-lg-12 d-flex align-items-center">
+                    <input required type="password" name="contrasenia" class="form-control" id="contrasenia" value="" placeholder="Contraseña*" autocomplete="off">
+                </div>
+            </div>
+            <div class="row mx-auto mb-1" id="divAnuncioContraseña" >
+            </div>
+        </fieldset>
+        <div class="d-grid gap-2 boton-registrarse d-flex border-top pt-3">
+            <button class="btn btn-lg btn-primary w-50 mx-auto"  type="submit" id="btnGuardarCambios">
+                Guardar
+            </button>
+            <button class="btn btn-lg btn-primary w-50 mx-auto"  type="button" id="btnCancelarCambios">
+                Cancelar
+            </button>
+        </div>
+
+    </form>
+</div>
+

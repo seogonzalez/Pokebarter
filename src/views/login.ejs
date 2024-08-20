@@ -1,0 +1,122 @@
+<% pag = "Iniciar sesión"; %>    
+<%- include('partials/_header'); %>
+
+<script defer src="/scripts/login.js"></script>
+
+<main class="mainLogin">
+
+    <!-- Opacidad de la pantalla -->
+
+    <div class="z-2 position-absolute w-100 h-100 mx-0" style="background-color: rgba(0, 0, 0, 0.274); display: none;" id="div-pantalla"></div>
+   
+    <!-- Zona de inicio de sesión -->
+
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="row principal h-100">
+            <div class="container col-lg-6 container-fluid h-100 container-login" >
+                <div class="div-img-logo h-100">
+                    <img src="/img/logo.png" alt="Descripción de la imagen">
+                </div>
+            </div>
+
+            <div class="seccion-de-login container col-md-6 h-100 d-flex justify-content-center align-items-center" >
+                <div class="div-formulario h-50">
+                    <form action="/inicio" method="post" id="formLogin">
+                        <fieldset class="pb-1">
+                            <div>
+                                <input type="text" name="username" class="form-control" required id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                            </div>
+                            <div>
+                                <input type="password" name="contrasenia" required class="form-control" id="exampleInputPassword1" placeholder="Contraseña" autocomplete="off">
+                            </div>
+                             
+                            <div class="d-grid gap-1">
+                                <button  class="btn btn-lg btn-primary" type="submit" id="iniciar">Iniciar sesión</button>
+                            </div>  
+                            <div class="text-danger mb-0 py-0 small" id="datosIncorrectos" style="height: 15px;">
+                                
+                            </div> 
+                        </fieldset>
+                      
+                        <div class="d-grid gap-2 boton-registrarse ">
+                            <button class="btn btn-lg btn-primary" style="width: 100%;" type="button" id="registrar">
+                                Registrarse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Zona de registro -->
+
+    <div id="div-registro" class="shadow container bg-light rounded py-3 px-4 position-absolute z-3 " style="width: 35%; top: 50%;
+    left: 50%;transform: translate(-50%, -50%); display: none;">
+        <form enctype="multipart/form-data" id="formRegistro">
+            <fieldset>
+                <button id="x-cerrar" class="position-absolute border-0 text-muted me-3" style="background-color: transparent; right: 0" type="button">&#x2716;</button>
+                <legend class="text-center mb-3"><b>Registrate</b></legend>
+                <div class="row mx-auto mb-1">
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <input type="text" name="nombre" class="form-control " id="nombre" aria-describedby="emailHelp" placeholder="Nombre">
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <input type="text" name="apellido" class="form-control " id="apellido" aria-describedby="emailHelp" placeholder="Apellido">
+                    </div>
+                </div>
+
+                <div class="row mx-auto mb-1">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <input required type="text" name="username" class="form-control " id="username" placeholder="Username*">
+                    </div>
+                    <div id="userRegistrado">
+                        
+                    </div>
+                </div>
+
+                <div class="row mx-auto mb-1">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <input required type="email" name="email" class="form-control" id="email" placeholder="Correo electrónico*" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="row mx-auto mb-1">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <input type="telefono" name="telefono" class="form-control" id="telefono" placeholder="Teléfono" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="row mx-auto mb-1">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <textarea class="form-control" id="datos" name="datos_adicionales" placeholder="¿Algo que quieras contar?" rows="2"></textarea>                
+                    </div>
+                </div>
+
+                <div class="row mx-auto mb-1">
+                    <div class="col-lg-12 d-flex align-items-center">
+                        <input required type="password" name="contrasenia" class="form-control" id="contrasenia" placeholder="Contraseña*" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="row mx-auto small mb-2">
+                    <label for="exampleFormControlFile1" class="text-muted">Sube una imagen de perfil</label>
+                    <input type="file" class="form-control-file text-muted" name="img" id="imgUser">
+                </div>
+                <div class="row text-muted mx-auto">
+                    <p class="text-muted small">Al registrarte aceptarás el uso de tus datos por Pokebarter</p>
+                </div>
+            </fieldset>
+            <div class="d-grid gap-2 boton-registrarse border-top pt-3">
+                <button class="btn btn-lg btn-primary w-50 mx-auto" type="submit" id="registroRealizado">
+                    Registrarse
+                </button>
+            </div>
+
+        </form>
+        <p class="text-muted small mt-2 mb-0">Campos con * obligatorios.</p>
+    </div>
+
+
+</main>    
+<%- include('partials/_footer'); %>

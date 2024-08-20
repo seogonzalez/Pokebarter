@@ -1,0 +1,47 @@
+<% pag = usuario[0].username; %>   
+<%- include('partials/_header'); %>
+<%- include('partials/_nav'); %>
+
+<script defer src="/scripts/perfil.js"></script>
+
+<main class="text-light">
+  
+    <div id="partePerfil">
+
+        <%- include('partials/_profile')%>
+    
+    </div>
+
+     <!-- Zona principal de la pantalla donde se muestran publicaciones -->
+    <div class="container position-absolute top-0 start-0 m-nav ml-centro col-md-6 px-0 zonaPrincipal" >
+        <div class="container partePrncipal ">
+            <div class="row vh-100 ">
+
+                <div id="partePosteo">
+        
+                    <%- include('partials/_posteo')%>
+                  
+                  </div>
+                  <div id="parteMuro">
+          
+                    <%- include('partials/_muro')%>
+                
+                  </div>
+
+            </div>
+        </div>
+    </div>
+
+   <div id="parteLateral" class="parteLateral" style="visibility: visible;">
+
+       <%- include('partials/_lateral')%> 
+
+    </div>
+    
+   
+
+  
+</main>  
+  
+<%- include('partials/_footer'); %>
+  
